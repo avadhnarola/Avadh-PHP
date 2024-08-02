@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Branch Form</title>
-    <link rel="stylesheet" href="assets/css/add.css">
+    <link rel="stylesheet" href="assets/css/add-table.css">
 
 </head>
 
@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
         <p class="title">Branch Form</p>
         <form class="form" method="post">
-            <input type="text" class="input" placeholder="Branch Name" name="bname">
+            <input type="text" class="input" placeholder="Branch Name" name="bname" required>
             <input type="submit" class="form-btn" name="submit">
         </form>
     </div>

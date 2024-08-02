@@ -307,26 +307,26 @@ if (!isset($_SESSION["id"])) {
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="viewBranch.php">
-          <i class="bi bi-grid"></i>
-          <span>View Branch Data </span>
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link " href="viewAdmin.php">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-box"></i>
           <span>View Admin Data</span>
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link " href="viewBranch.php">
+          <i class="bi bi-eye"></i>
+          <span>View Branch Data </span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link " href="viewRole.php">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-eye"></i>
           <span>View Role Data </span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="logout.php">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-door"></i>
           <span>Logout</span>
         </a>
       </li>
