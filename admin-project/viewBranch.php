@@ -25,36 +25,52 @@ $res = mysqli_query($conn, $sel);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-        <style>
+
+    <style>
         td {
             text-align: center;
         }
 
+        thead th {
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+
         .flex {
-           margin: 0px 300px 0px 310px;
+            margin: 30px 300px 0px 310px;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: .25rem;
+            padding: 2px 10px;
+            width: 30%;
+        }
+        form.frm {
+            padding: 20px 0px 0px 10px;
         }
     </style>
 </head>
 
 <body>
     <div class="flex">
-        <form action="" method="get">
-            <input type="text" name="search">
-            <input type="submit" name="" id="" value="Submit">
-        </form>
+        <!-- <form action="" method="get" class="frm">
+            <input type="text" name="search" id="">
+            <input type="submit" value="sumbit" style="margin-bottom:30px;">
+        </form> -->
 
-        <table class="table table-hover table-striped table-success table-sm">
+        <table class="table table-striped table-hover table-sm">
             <thead>
-                <th>BranchId</th>
-                <th>Name</th>
-            </thead>
-            <?php while ($row = mysqli_fetch_assoc($res)) { ?>
                 <tr>
-                    <td><?php echo $row['b_id'] ?></td>
-                    <td><?php echo $row['bname'] ?></td>
+                    <th>BranchId</th>
+                    <th>Name</th>
                 </tr>
-            <?php } ?>
+            </thead>
+            <tbody>
+                <?php while ($row = mysqli_fetch_assoc($res)) { ?>
+                    <tr>
+                        <td><?php echo $row['b_id'] ?></td>
+                        <td><?php echo $row['bname'] ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
         </table>
     </div>
 

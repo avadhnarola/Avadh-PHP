@@ -60,9 +60,9 @@ if (!isset($_SESSION["id"])) {
     </div><!-- End Logo -->
 
     <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      <form class="search-form d-flex align-items-center" method="GET" action="#">
+        <input type="text" name="search" placeholder="Search">
+        <button type="submit"><i class="bi bi-search"></i></button>
       </form>
     </div><!-- End Search Bar -->
 
@@ -290,25 +290,25 @@ if (!isset($_SESSION["id"])) {
       </li>
       <li class="nav-item">
         <a class="nav-link " href="register.php">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-menu-button-wide"></i>
           <span>Add Admin</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="branch.php">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-menu-button-wide"></i>
           <span>Add Branch</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="role.php">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-menu-button-wide"></i>
           <span>Add Role</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="viewAdmin.php">
-          <i class="bi bi-box"></i>
+          <i class="bi bi-eye"></i>
           <span>View Admin Data</span>
         </a>
       </li>
@@ -326,7 +326,7 @@ if (!isset($_SESSION["id"])) {
       </li>
       <li class="nav-item">
         <a class="nav-link " href="logout.php">
-          <i class="bi bi-door"></i>
+          <i class="bi bi-box-arrow-in-left"></i>
           <span>Logout</span>
         </a>
       </li>

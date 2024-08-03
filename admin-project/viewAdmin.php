@@ -31,23 +31,21 @@ $res = mysqli_query($conn, $select);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-        <style>
+    <style>
         * {
             padding: 0;
             margin: 0;
         }
-
-        td {
-            /* text-align: center; */
+        .flex {
+            justify-content: center;
+            margin: 30px 10px 0px 310px;
+            box-shadow: 0px 0px 20px gray;
+            border-radius: .25rem;
+            padding: 2px 10px;
         }
 
-        .flex{
-          justify-content: center;
-          margin-right: 10px;
-          margin-left: 310px;
-        }
-        table {
-            /* margin: auto; */
+        form.frm {
+            padding: 20px 0px 0px 10px;
         }
     </style>
 
@@ -56,12 +54,12 @@ $res = mysqli_query($conn, $select);
 <body>
 
     <div class="flex">
-        <form action="" method="get" class="frm">
+        <!-- <form action="" method="get" class="frm">
             <input type="text" name="search" id="">
             <input type="submit" value="sumbit" style="margin-bottom:30px;">
-        </form>
+        </form> -->
 
-        <table class="table table-success table-striped table-hover table-sm">
+        <table class="table table-striped table-hover table-sm">
             <thead>
                 <th>ID</th>
                 <th>Name</th>
