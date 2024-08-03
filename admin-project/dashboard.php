@@ -326,7 +326,7 @@ if (!isset($_SESSION["id"])) {
       </li>
       <li class="nav-item">
         <a class="nav-link " href="logout.php">
-          <i class="bi bi-box-arrow-in-left"></i>
+          <i class="bi bi-box-arrow-in-right"></i>
           <span>Logout</span>
         </a>
       </li>

@@ -5,7 +5,10 @@ if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $grade = $_POST['grade'];
     $marks = $_POST['marks'];
-    print_r($_FILES);die();
+    print_r($_FILES);
+    $image= $_FILES['image']['name'];
+    $tmp_name = $_FILES['image']['tmp_name'];
+    move_uploaded_file($tmp_name,"images/$image");
     
 
     if (isset($_GET['u_id'])) {
@@ -13,7 +16,7 @@ if (isset($_POST['submit'])) {
         // mysqli_query($conn,$update);
     } else {
 
-        $query = "insert into studentdata (sname,grade,marks) values ('$name','$grade','$marks')";
+        $query = "insert into studentdata (sname,grade,marks,image) values ('$name','$grade','$marks','$image')";
     }
 
     mysqli_query($conn, $query);
@@ -50,22 +53,27 @@ if (isset($_POST['submit'])) {
             font-optical-sizing: auto;
             font-style: normal;
         }
+
+        .main{
+            box-shadow: 0px 0px 20px gray;
+        }
     </style>
+
 </head>
 
 
 
 <body>
     <section>
-        <div class="form-container container mt-4">
+        <div class="form-container container mt-4 main">
             <div class="logo-container">
-                <h3>Insert Stundent Data</h3>
+                <h3>Stundent Details</h3>
             </div>
 
             <form class="form" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="email">Name</label>
-                    <input type="text" id="email" name="name" placeholder="Enter name" required="">
+                    <input  type="text" id="email" name="name" placeholder="Enter name" required>
                     <label for="grade">Grade</label>
                     <select name="grade" id="grade" class="form-control" required>
                         <option value="">Select a Grade</option>
@@ -76,11 +84,11 @@ if (isset($_POST['submit'])) {
                         <option value="grade 5">Grade 5</option>
                     </select>
                     <label>Marks</label>
-                    <input type="number" name="marks" placeholder="Enter marks" required="">
+                    <input  type="number" name="marks" placeholder="Enter marks" required>
                 </div>
-                <input type="file" name="image" class="mt-3">    
+                <input  type="file" name="image" class="mt-3" required>    
 
-                <input type="submit" name="submit" class="form-submit-btn" id="submit">
+                <input  type="submit" name="submit" class="form-submit-btn" id="submit" >
             </form>
         </div>
         <div class="container" style="margin-top: 20px;">
