@@ -28,12 +28,13 @@ $res = mysqli_query($conn, $select);
             padding: 0;
             margin: 0;
         }
+
         .flex {
             justify-content: center;
             margin: 30px 10px 0px 310px;
             box-shadow: 0px 0px 20px gray;
             border-radius: .25rem;
-            padding: 2px 10px;
+            padding: 5px 10px;
         }
 
         form.frm {
@@ -64,17 +65,31 @@ $res = mysqli_query($conn, $select);
             </thead>
 
             <?php while ($row = mysqli_fetch_assoc($res)) { ?>
-                <tr>
-                    <td><?php echo $row['id'] ?></td>
-                    <td><?php echo $row['name'] ?></td>
-                    <td><?php echo $row['email'] ?></td>
-                    <td><?php echo $row['contact'] ?></td>
-                    <td><?php echo $row['password'] ?></td>
-                    <td><?php echo $row['bname'] ?></td>
-                    <td><?php echo $row['rname'] ?></td>
-                    <td><img src="images/<?php echo $row['image'] ?>" alt="not found" height="50px" width="50px"
-                            style="border-radius: 50%;"></td>
-                </tr>
+            <tr>
+                <td>
+                    <?php echo $row['id'] ?>
+                </td>
+                <td>
+                    <?php echo $row['name'] ?>
+                </td>
+                <td>
+                    <?php echo $row['email'] ?>
+                </td>
+                <td>
+                    <?php echo $row['contact'] ?>
+                </td>
+                <td>
+                    <?php echo $row['password'] ?>
+                </td>
+                <td>
+                    <?php echo $row['bname'] ?>
+                </td>
+                <td>
+                    <?php echo $row['rname'] ?>
+                </td>
+                <td><img src="images/<?php echo $row['image'] ?>" alt="not found" height="50px" width="50px"
+                        style="border-radius: 50%;"></td>
+            </tr>
             <?php } ?>
         </table>
     </div>

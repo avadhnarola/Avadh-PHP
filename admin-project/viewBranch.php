@@ -40,7 +40,7 @@ $res = mysqli_query($conn, $sel);
             margin: 30px 300px 0px 310px;
             box-shadow: 0px 0px 10px gray;
             border-radius: .25rem;
-            padding: 2px 10px;
+            padding: 5px 10px;
             width: 30%;
         }
         form.frm {

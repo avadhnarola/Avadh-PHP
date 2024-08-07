@@ -325,6 +325,12 @@ if (!isset($_SESSION["id"])) {
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link " href="inquiry.php">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>Add Inquiry</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link " href="logout.php">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Logout</span>
