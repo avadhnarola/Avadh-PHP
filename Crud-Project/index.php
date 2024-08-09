@@ -6,10 +6,10 @@ if (isset($_POST['submit'])) {
     $grade = $_POST['grade'];
     $marks = $_POST['marks'];
     print_r($_FILES);
-    $image= $_FILES['image']['name'];
+    $image = $_FILES['image']['name'];
     $tmp_name = $_FILES['image']['tmp_name'];
-    move_uploaded_file($tmp_name,"images/$image");
-    
+    move_uploaded_file($tmp_name, "images/$image");
+
 
     if (isset($_GET['u_id'])) {
         $query = "update studentdata set sname = '$name' , grade = '$grade' , marks = '$marks' where id=" . $_GET['u_id'];
@@ -54,8 +54,19 @@ if (isset($_POST['submit'])) {
             font-style: normal;
         }
 
-        .main{
+        .main {
             box-shadow: 0px 0px 20px gray;
+        }
+
+        .form-control {
+            outline: none;
+        }
+
+        .form-control:active {
+            outline: none;
+            box-shadow: 0px;
+            background-color: #fff;
+            outline: 0;
         }
     </style>
 
@@ -73,7 +84,7 @@ if (isset($_POST['submit'])) {
             <form class="form" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="email">Name</label>
-                    <input  type="text" id="email" name="name" placeholder="Enter name" required>
+                    <input type="text" id="email" name="name" placeholder="Enter name" required>
                     <label for="grade">Grade</label>
                     <select name="grade" id="grade" class="form-control" required>
                         <option value="">Select a Grade</option>
@@ -84,11 +95,11 @@ if (isset($_POST['submit'])) {
                         <option value="grade 5">Grade 5</option>
                     </select>
                     <label>Marks</label>
-                    <input  type="number" name="marks" placeholder="Enter marks" required>
+                    <input type="number" name="marks" placeholder="Enter marks" required>
                 </div>
-                <input  type="file" name="image" class="mt-3" required>    
+                <input type="file" name="image" class="mt-3" required>
 
-                <input  type="submit" name="submit" class="form-submit-btn" id="submit" >
+                <input type="submit" name="submit" class="form-submit-btn" id="submit">
             </form>
         </div>
         <div class="container" style="margin-top: 20px;">
